@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dcbf33c2-615a-497f-92d5-7aa14dd562ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DesafioSicredi" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Y4eVeLf0DUyO0ewqu3KcbikYUH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/drivers" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rodrigo.caetano\Desktop\Rodrigo\IdeaProjects\DesafioSicredi\src\test\java\pageSteps" />
+      <recent name="C:\Users\rodrigo.caetano\Desktop\Rodrigo\CWI\A_PROJETOS\AUTTAR - BO_novas funcionalidades\Frame Auttar\bo-RAC290\reports" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rodrigo.caetano\Desktop\Rodrigo\IdeaProjects\DesafioSicredi\src\test\resources\drivers" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pageSteps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber java.Feature: 03_Cases_Sicredi">
+    <configuration name="Feature: 01_ValidarAcessoPaginaSimulaInvestimento" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/01_ValidarAcessoPaginaSimulaInvestimento.feature" />
+      <option name="GLUE" value="pageSteps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DesafioSicredi" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: 01_ValidarAcessoPaginaSimulaInvestimento" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: 01_ValidarLoginPageBO (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/01_ValidarLoginPageBO.feature" />
+      <option name="GLUE" value="pageSteps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="bo-RAC290" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: 01_ValidarLoginPageBO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: 02_ValidarAtualizaAgenda" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/02_ValidarAtualizaAgenda.feature" />
+      <option name="GLUE" value="pageSteps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="bo-RAC290" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: 02_ValidarAtualizaAgenda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: 03_Cases_Sicredi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/03_Cases_Sicredi.feature" />
+      <option name="GLUE" value="pageSteps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DesafioSicredi" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: 03_Cases_Sicredi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: 02_Validar se o site carregou corretamente" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/01_ValidarAcessoPaginaSimulaInvestimento.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DesafioSicredi" />
+      <option name="NAME_FILTER" value="^02_Validar se o site carregou corretamente$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^02_Validar se o site carregou corretamente$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: 02_Validar se o site carregou corretamente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DesafioSicredi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber java.Feature: 03_Cases_Sicredi" />
+        <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber java.Feature: 01_ValidarAcessoPaginaSimulaInvestimento" />
+        <item itemvalue="Cucumber java.Feature: 02_ValidarAtualizaAgenda" />
+        <item itemvalue="Cucumber java.Feature: 01_ValidarLoginPageBO (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dcbf33c2-615a-497f-92d5-7aa14dd562ea" name="Default Changelist" comment="" />
+      <created>1582206318683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582206318683</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="400" y="34" key="#Scenario:_02_Validar_se_o_site_carregou_corretamente" timestamp="1584153796935">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="400" y="34" key="#Scenario:_02_Validar_se_o_site_carregou_corretamente/0.0.1366.728@0.0.1366.728" timestamp="1584153796935" />
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1582213408417">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1582213408417" />
+    <state x="435" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584270443823">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1584270443823" />
+    <state x="290" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584374594886">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="290" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584374594886" />
+    <state x="1765" y="82" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1583521646230">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1765" y="82" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583521646230" />
+    <state x="399" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584279862027">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="399" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584279862027" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582208260763">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1582208260763" />
+    <state x="1468" y="42" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1583350983259">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1468" y="42" key="#com.intellij.unscramble.UnscrambleDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583350983259" />
+    <state x="438" y="67" key="#xdebugger.evaluate" timestamp="1584572889182">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="67" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1584572889182" />
+    <state x="1829" y="119" key="FileChooserDialogImpl" timestamp="1583521818613">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1829" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583521818613" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583016327842" />
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="314" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584376469179" />
+    <state width="1323" height="314" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1584387728029" />
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="314" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584376469179" />
+    <state width="1323" height="314" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1584387728028" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="314" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584376469179" />
+    <state width="1323" height="314" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1584387728028" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="314" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584376469179" />
+    <state width="1323" height="314" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1584387728028" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.1.bottom" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="281" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583264734995" />
+    <state width="1323" height="281" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583526133060" />
+    <state width="1323" height="188" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.1.center" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="281" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583264734995" />
+    <state width="1323" height="281" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583526133060" />
+    <state width="1323" height="188" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.1.left" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="281" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583264734994" />
+    <state width="1323" height="281" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583526133060" />
+    <state width="1323" height="188" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state width="1323" height="188" key="GridCell.Tab.1.right" timestamp="1584573206019">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="281" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583264734995" />
+    <state width="1323" height="281" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583526133060" />
+    <state width="1323" height="188" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584573206019" />
+    <state x="101" y="25" key="Maven.ArtifactSearchDialog" timestamp="1582208148122">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="101" y="25" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1582208148122" />
+    <state x="1550" y="6" key="SettingsEditor" timestamp="1583521853020">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1582208182903" />
+    <state x="1550" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583521853020" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583236897517">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583236897517" />
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1584389535768">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584362928561" />
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1584389535768" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584219839320" />
+    <state x="1586" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583260538022">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1586" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583260538022" />
+    <state x="1400" y="0" width="715" height="715" maximized="true" key="dock-window-1" timestamp="1584374845356">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1400" y="0" width="715" height="715" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584374845356" />
+    <state x="1366" y="2" width="671" height="715" key="dock-window-1/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583168359548" />
+    <state x="676" y="0" width="697" height="735" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1583250636513" />
+    <state x="329" y="195" width="1053" height="406" maximized="true" key="dock-window-2" timestamp="1583521853514">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="1359" y="0" width="892" height="735" key="dock-window-2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583250986789" />
+    <state x="329" y="195" width="1053" height="406" maximized="true" key="dock-window-2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583521853514" />
+    <state x="276" y="93" width="697" height="697" maximized="true" key="dock-window-2/0.0.1366.728@0.0.1366.728" timestamp="1583252612214" />
+    <state x="209" y="0" width="1139" height="680" maximized="true" key="dock-window-3" timestamp="1583252616353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="209" y="0" width="1139" height="680" maximized="true" key="dock-window-3/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583252122478" />
+    <state x="209" y="0" width="1139" height="680" maximized="true" key="dock-window-3/0.0.1366.728@0.0.1366.728" timestamp="1583252616353" />
+    <state x="-7" y="0" width="697" height="735" key="dock-window-4" timestamp="1583260829479">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="1359" y="0" width="830" height="735" key="dock-window-4/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583257822123" />
+    <state x="-48" y="74" width="1094" height="715" maximized="true" key="dock-window-4/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583257414015" />
+    <state x="-7" y="0" width="697" height="735" key="dock-window-4/0.0.1366.728@0.0.1366.728" timestamp="1583260829479" />
+    <state x="413" y="119" key="extract.method.dialog" timestamp="1584572431424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1584572431424" />
+    <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1584569970952">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="1745" y="0" width="607" height="728" key="find.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1583520635556" />
+    <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1584569970952" />
+    <state x="65" y="59" key="new project wizard" timestamp="1584380047474">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="59" key="new project wizard/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1584380047474" />
+    <state x="435" y="285" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1584277993632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="285" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584277993632" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584570864852">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584570864852" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/FixReport.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/FixReport.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CucumberJavaRunConfigurationType">
+        <watch expression="line" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

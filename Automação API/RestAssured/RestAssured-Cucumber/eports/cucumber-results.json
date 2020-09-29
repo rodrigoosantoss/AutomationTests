@@ -1,0 +1,84 @@
+[
+  {
+    "line": 5,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-21T01:45:00.688Z",
+        "line": 7,
+        "name": "Executar requisição para obter valor tabela FIPE de um veículo",
+        "description": "",
+        "id": "obter-valor-da-tabela-fipe-do-veículo-de-marca-gm;executar-requisição-para-obter-valor-tabela-fipe-de-um-veículo",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 5760357,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "que eu sei a marca do carro",
+            "match": {
+              "location": "TesteSteps.queEuSeiAMarcaDoCarro()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4380190,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "o modelo",
+            "match": {
+              "location": "TesteSteps.oModelo()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3350800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "o ano do veículo",
+            "match": {
+              "location": "TesteSteps.oAnoDoVeiculo()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 5027833373,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu realizar uma consulta",
+            "match": {
+              "location": "TesteSteps.euRealizarUmaConsulta()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1994579553,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "é possivel obter o seu atual valor de mercado",
+            "match": {
+              "location": "TesteSteps.ePossivelObterOSeuAtualValorDeMercado()"
+            },
+            "keyword": "Então "
+          }
+        ]
+      }
+    ],
+    "name": "Obter Valor da tabela FIPE do veículo de marca GM",
+    "description": "",
+    "id": "obter-valor-da-tabela-fipe-do-veículo-de-marca-gm",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/java/features/Teste.feature",
+    "tags": []
+  }
+]
