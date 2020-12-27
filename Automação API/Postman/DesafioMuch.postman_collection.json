@@ -1,0 +1,691 @@
+{
+	"info": {
+		"_postman_id": "8498b14f-8c1d-4735-86f8-d09373c58330",
+		"name": "DesafioMuch",
+		"description": "Objetivo desta documentação é apoiar o time de desenvolvedores da Much a receberem melhores feedback´s das suas implementações. O objetivo dos testes construídos foi garantir que qualquer nova implementação, não vá quebrar os 7 requisitos especificados abaixo:\n\n    1. Servidor HTTP que funcionará apenas para requisições GET;\n    2. Sistema permitirá utilizar apenas números no intervalo entre [-10000, 10000];\n    3. Ao se fazer essa requisição, retornará um JSON cuja chave \"extenso\" terá, em seu valor, o número inteiro por extenso, que foi inserido na path;\n    4. Pensando-se na internacionalização deste, o serviço terá suporte, além de\n    portugues, para tambem em ingles;\n    5. Caso não seja possível converter o valor inserido na path, chave “extenso” terá valor “Invalid data”;\n    6. Para estes casos, resposta deve ter status 400;\n    7. Para os casos válidos, resposta deve ter status 200.\n\nCom o intuito de dar maior agilidade e autonomia para o time, os testes automatizados foram publicados de forma com que os proprios desenvolvedores poderão rodar os testes em linha de comando com o Newman. Para isso, basta ter o pacote do NodeJS instalado.\n\nCONFIRMAR SE TEM NOTE INSTALADO\nnpm -v #Windows\nnpm — versão #Linux/Mac\n\nSE TIVER O NODE INSTALADO, basta executar a linha de comando\nnewman run https://www.getpostman.com/collections/0ff347d75306445dbe59\n\nSE NÃO TIVER O NODE INSTALADO\nhttps://www.npmjs.com/package/newman\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retorno em Portugues",
+			"item": [
+				{
+					"name": "Validar ERRO requisição POST",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is '405 NOT ALLOWED TO REQUEST <POST>''\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Portugues numero dez",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_10 = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +dataNotNull_10.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_10.extenso).not.to.equal(null);\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'dez'\", () => {\r",
+									"    pm.expect(dataNotNull_10.extenso).equal(\"dez\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Portugues numero dez extenso no path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidData = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidData.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidData.extenso).equal(\"Invalid data\");\r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/dez",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"dez"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Portugues numero dez mil",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_10000 = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +dataNotNull_10000.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_10000.extenso).not.to.equal(null);\r",
+									"    pm.expect(dataNotNull_10000.extenso).equal(\"dez mil\");\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'dez mil' written in Portuguese\", () => {\r",
+									"    pm.expect(dataNotNull_10000.extenso).equal(\"dez mil\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/10000",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Portugues numero dez mil e um",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataPath_eUm = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataPath_eUm.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataPath_eUm.extenso).equal(\"Invalid data\");\r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/10001",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Portugues numero dez mil e um negativo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataPath_eUmNeg = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataPath_eUmNeg.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataPath_eUmNeg.extenso).equal(\"Invalid data\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/-10001",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"-10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Portugues numero negativo menos dez",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_Menos10 = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\"+dataNotNull_Menos10.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_Menos10.extenso).not.to.equal(null);\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'menos dez'\", () => {\r",
+									"    pm.expect(dataNotNull_Menos10.extenso).equal(\"menos dez\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/-10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"-10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Portugues numero negativo menos dez por extenso no path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataNegativeNumber = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataNegativeNumber.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataNegativeNumber.extenso).equal(\"Invalid data\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/menosdez",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"menosdez"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Retorno em Inglês",
+			"item": [
+				{
+					"name": "Validar ERRO requisição POST",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is '405 NOT ALLOWED TO REQUEST <POST>''\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Inglês numero dez",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_10En = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +dataNotNull_10En.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_10En.full).not.to.equal(null);\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'ten'\", () => {\r",
+									"    pm.expect(dataNotNull_10En.full).equal(\"ten\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Inglês numero dez extenso no path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataPath = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataPath.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataPath.full).equal(\"Invalid data\");\r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/ten",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"ten"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Ingles numero dez mil",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_10000En = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +dataNotNull_10000En.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_10000En.full).not.to.equal(null);\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'ten thousand' written in English\", () => {\r",
+									"    pm.expect(dataNotNull_10000En.full).equal(\"ten thousand\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/10000",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Inglês numero dez mil e um",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataPath = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataPath.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataPath.full).equal(\"Invalid data\");\r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/10001",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Ingles numero dez mil e um negativo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataPathEnNeg = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataPathEnNeg.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataPathEnNeg.full).equal(\"Invalid data\");\r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/-10001",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"-10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar retorno em Ingles numero negativo menos dez",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 'OK' 200'\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var dataNotNull_MinuTenEN = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\"+dataNotNull_MinuTenEN.full+\">\\  and not empty\", () => {\r",
+									"    pm.expect(dataNotNull_MinuTenEN.full).not.to.equal(null);\r",
+									"}); \r",
+									"\r",
+									"pm.test(\"Validate if the content is 'menos dez'\", () => {\r",
+									"    pm.expect(dataNotNull_MinuTenEN.full).equal(\"minus ten\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/-10",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"-10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar ERRO retorno em Ingles numero negativo menos dez por extenso no path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate status code is 'BAD REQUEST' 400'\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"var invalidDataNegativeNumber = JSON.parse(responseBody);\r",
+									"pm.test(\"Validate if the content is present and is --> <\" +invalidDataNegativeNumber.extenso+\">\\  and not empty\", () => {\r",
+									"    pm.expect(invalidDataNegativeNumber.extenso).equal(\"Invalid data\");\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://challengeqa.staging.devmuch.io/en/menosdez",
+							"protocol": "http",
+							"host": [
+								"challengeqa",
+								"staging",
+								"devmuch",
+								"io"
+							],
+							"path": [
+								"en",
+								"menosdez"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
